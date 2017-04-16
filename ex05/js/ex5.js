@@ -13,13 +13,13 @@ function showimg(e) {
 }
 /*5.2*/
 $("cont-btn").ready(function(){
-    $("li").hover(function () {
-        $("li").css({background:'white'});
+    $(".cont-btn").hover(function () {
+        $(".cont-btn").css({background:'white'});
         $(this).css({background:'#666666'});
         $(".cont-txt").text($(this).index()+1);
     });
-    $("li").mouseleave(function () {
-        $("li").css({background:'white'});
+    $(".cont-btn").mouseleave(function () {
+        $(".cont-btn").css({background:'white'});
         $(".cont-txt").text("");
     });
 });

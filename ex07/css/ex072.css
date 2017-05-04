@@ -67,20 +67,16 @@ li{
     padding-right: 0px;
 }
 .header-text{
-    width: 220px;
+    width: 210px;
     height: 25px;
     background: white;
     justify-content: center;
     margin-left: -5px;
 }
-.angle{
-    font-size: 100%;
-    margin: 5px;
-}
 .dropdown{
     padding-left: 6px;
-    width: 50px;
-    height: 15px;
+    width: 40px;
+    height: 17px;
 }
 .dropdown-toggle{
     width: 50px;

@@ -75,11 +75,13 @@ li{
 }
 .dropdown{
     padding-left: 6px;
-    width: 40px;
+    width: 50px;
     height: 17px;
 }
+.width-text{
+    width: 40px;
+}
 .dropdown-toggle{
-    width: 50px;
     height: 15px;
     display: flex;
     justify-content: flex-start;

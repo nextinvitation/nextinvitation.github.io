@@ -28,8 +28,6 @@ var local = new BMap.LocalSearch(map, {
 });
 local.searchNearby("宾馆", "西湖",3000);
 
-var circle = new BMap.Circle(point,3000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});
-map.addOverlay(circle);
 
 /*
  //矩形搜索

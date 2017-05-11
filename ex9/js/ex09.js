@@ -84,7 +84,23 @@ var opts = {
     title: "<span style='color:#070000'>"+"地址：", // 信息窗口标题
 }
 
-for(var i = 0;i < date_info.length;i++){
+
+for(var i=0;i<data_info.length;i++)
+{
+    var marker = new BMap.Marker(new BMap.Point(data_info[i][0],data_info[i][1]));  // 创建标注
+    var imgaddress="<img style='width:330px;height:154px' src='img/"+i+".png' />";
+    var title="<h4 style='margin:0 0 5px 0;padding:0.2em 0'>"+data_info[i][2]+"</h4>";
+    var content=imgaddress+title;
+    map.addOverlay(marker);               // 将标注添加到地图中
+    addevent(content,marker);
+}
+function addevent(content,marker){
+    marker.addEventListener("click",function(e){
+        var infoWindow = new BMap.InfoWindow(content,opts);
+        this.openInfoWindow(infoWindow,marker);
+    });
+}
+/*for(var i = 0;i < date_info.length;i++){
     var point= new BMap.Marker(new BMap.Point(date_info[i][0],date_info[i][1]));
     var address = date_info[i][2];
     var box=document.createElement("div");
@@ -98,7 +114,7 @@ for(var i = 0;i < date_info.length;i++){
     box.append(img);
     map.addOverlay(point);
     OnClick(box,point);
-}
+}*/
 
 function OnClick(box,point){
     point.addEventListener("click",function(e){
